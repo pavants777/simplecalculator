@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>simple calcluator</title>
+      <style>
+      input {
+        color:white;
+        background-color:black;
+        padding:20px;
+        margin:5px;
+      }
+      table,.pavan,.demo,.deletekey {
+        border: 5px solid black;
+        margin:30px;
+        padding:5px;
+        background:lightgray;
+      }
+      .pavan,.demo,.deletekey {
+        color:black;
+        margin:0px;
+        padding:10px 30px;
+        font-size:large;
+      }
+      .deletekey {
+        margin:5px;
+      }
+      #numberkey{
+        border-radius:30rem;
+        border:0.2rem solid white;
+        box-shadow:0.5rem 0.5rem black;
+      }
+      #numberkey:hover {
+        box-shadow:0.2rem 0.2rem black;
+      }
+      .pavan,.demo {
+        border-radius:30rem;
+      }
+      </style>
+    </head>
+    <body>
+        <center>
+            <br><br><br>
+            <div>
+                <div>
+                    <input class="pavan" disabled/><br>
+                    <label>Answer:</label>
+                    <br><input class="demo" disabled /><br>
+          
+            <table>
+            <tbody>
+                <tr>
+                    <td><input type="button"  value="1" id="numberkey" onclick="display(1)"></td>
+                    <td><input type="button"  value="2" id="numberkey" onclick="display(2)"></td>
+                    <td><input type="button"  value="3" id="numberkey" onclick="display(3)"></td>
+                    <td><input type="button" value="C"  id="numberkey" onclick="clrscr()"></td>
+                </tr>
+                <tr>
+                    <td><input type="button"  value="4" id="numberkey" onclick="display(4)"></td>
+                    <td><input type="button"  value="5" id="numberkey" onclick="display(5)"></td>
+                    <td><input type="button"  value="6" id="numberkey" onclick="display(6)"></td>
+                    <td><input type="button"  value="+" id="numberkey" onclick="display('+')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button"  value="7" id="numberkey" onclick="display(7)"></td>
+                    <td><input type="button"  value="8" id="numberkey" onclick="display(8)"></td>
+                    <td><input type="button"  value="9" id="numberkey" onclick="display(9)"></td>
+                    <td><input type="button"  value="- " id="numberkey" onclick="display('-')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button"  value="*" id="numberkey" onclick="display('*')"></td>
+                    <td><input type="button"  value="0" id="numberkey" onclick="display(0)"></td>
+                    <td><input type="button"  value="/ " id="numberkey" onclick="display('/')"></td>
+                    <td><input type="button"  value="="  onclick="calulate();" id="numberkey"></td>
+                </tr>
+            </tbody>
+           </table>
+           </div>
+           </div>
+        </center>
+         <script>
+            let v=0 ;
+            let dis= document.querySelector(".pavan");
+            let nu= document.querySelector(".demo");
+            let x;
+               function display(value) {
+                 dis.value+=value;
+                 x=value;
+                }
+               function cpavan() {
+                 x=value;
+                 dis.value-=x;
+               }
+               function calulate() {
+                 let q = eval(dis.value); 
+                 nu.value=q;
+              }
+              function clrscr(){
+                 dis.value=" ";
+                 nu.value=" ";
+              }
+        </script>
+    </body>
+</html>
